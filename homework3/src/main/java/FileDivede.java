@@ -42,14 +42,10 @@ public class FileDivede extends JFrame {
         textSearch = new JTextArea("Search");
         textSearch.setSize(new Dimension(300, 150));
         textSearch.setLocation(new Point(150,10));
-
-
         add(button1);
         add(searchButton);
         add(textSearch);
-
         compare = new TF_IDFImpl();
-
 
         button1.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -60,9 +56,6 @@ public class FileDivede extends JFrame {
                 String path = file.getAbsolutePath();
                 FileHandler fileHandler = new FileHandleImpl();
                 stocks = fileHandler.getStockInfoFromFile(path);
-                ChineseSegmenter chineseSegmenter = new ChineseSegmenterImpl();
-//                compare = new TF_IDFImpl();
-//                compare.getResult( chineseSegmenter.getWordsFromInput(stocks),stocks);
                 System.out.println("mlgb");
 
             }

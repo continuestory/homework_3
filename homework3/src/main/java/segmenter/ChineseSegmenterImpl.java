@@ -13,10 +13,8 @@ public class ChineseSegmenterImpl implements ChineseSegmenter {
 
         List<String> inputList = new LinkedList<String>();
 
-        for(int i=0;i<60;i++){
+        for(int i=0;i<stocks.length;i++){
             Result result = ToAnalysis.parse(stocks[i+1].getInformation(7)+stocks[i+1].getInformation(5)+stocks[i+1].getInformation(6));
-
-
             List<Term> terms = result.getTerms();
             for(int j = 0; j<terms.size();j++){
                 inputList.add(terms.get(j).getName());
